@@ -18,6 +18,8 @@ connectDB();
 app.use(express.json());
 app.use(cors(corsOptions));
 
+// routes
+app.use("/api/user", require("./routes/userRoutes"))
 app.use('/product/', require('./routes/product'));
 
 app.listen(PORT, () => {
