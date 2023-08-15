@@ -18,9 +18,11 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      // => @media (min-width: 1536px) { ... }]
+      'vsmsbs' : {'max' : '290px'},
       'vsmm': { 'max': '312px' },
       'vsmmm': {'max': '400px'},
+      
       // max value for very small. Matlb uss takk kaisa karega vo define kiya
       'smm': { 'max': '639px' },
       // max value for small. Matlb uss takk kaisa karega vo define kiya
@@ -31,6 +33,7 @@ module.exports = {
       'smtmd': { 'min': '640px', 'max': '767px' },
       // 'smtmd': { 'min': '639px', 'max': '639px' } . Mtlb uss beech kaisa karega vo define kiya
       // Small to medium 
+      'mdsb' : {'min' : '830px'},
       'mdtlg': { 'min': '830px', 'max': '1024px' },
       // 'smtmd': { 'min': '639px', 'max': '639px' } . Mtlb uss beech kaisa karega vo define kiya
       // Small to medium 
@@ -49,8 +52,8 @@ module.exports = {
           '100%': { transform: 'translateX(0%)' },
         },
         fadeOut: {
-          '0%': { transform: 'translateX(120%)' },
-          '100%': { transform: 'translateX(0%)' },
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-140%)' },
         },
       },
       animation: {
