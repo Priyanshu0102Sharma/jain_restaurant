@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const productSchema = mongoose.Schema ({
-    // admin: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'admin',
-    //     required: true
-    // },
+    admin: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'admin',
+        required: true
+    },
     productName:{
         type:String,
         required: true,

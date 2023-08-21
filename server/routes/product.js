@@ -1,6 +1,7 @@
 const express = require('express');
 const Product = require('../database/models/productModal');
 const router = express.Router();
+const adminAuthentication = require('../middlewares/adminAuthentication');
 
 router.get('/getProducts', async (req, res) => {
     const products = await Product.find({});
@@ -18,7 +19,7 @@ router.get('/getProduct/:id', async (req, res) => {
     res.json(product);
 })
 
-router.post("/addProduct", async (req, res) => {
+router.post("/addProduct", adminAuthentication, async (req, res) => {
     try {
         const {productName, productPrice, productDescription, productCategory} = req.body;
 
@@ -28,7 +29,7 @@ router.post("/addProduct", async (req, res) => {
         }
 
         product = await Product.create({
-             productName, productPrice, productDescription, productCategory
+            admin: admin.id, productName, productPrice, productDescription, productCategory
         })
 
         const products = await Product.find({});
@@ -40,7 +41,7 @@ router.post("/addProduct", async (req, res) => {
     }
 })
 
-router.patch('/updateProduct/:id', async(req, res) => {
+router.patch('/updateProduct/:id',adminAuthentication, async(req, res) => {
     try {
         let product = await Product.findById(req.params.id);
         if(!product)  return res.status(404).send("Product is not found!");
@@ -59,9 +60,9 @@ router.patch('/updateProduct/:id', async(req, res) => {
             newProduct.productCategory = productCategory;
         }
 
-        // if (product.admin.toString() !== req.admin.id) {
-        //     return res.status(401).send("Not Allowed");
-        // }
+        if (product.admin.toString() !== req.admin.id) {
+            return res.status(401).send("Not Allowed");
+        }
 
         product = await Product.findByIdAndUpdate(req.params.id, { $set: newProduct }, { new: true })
         res.json({ product, message: "Product has been updated successfully!" });
@@ -72,7 +73,7 @@ router.patch('/updateProduct/:id', async(req, res) => {
     }
 })
 
-router.delete('/deleteProduct/:id', async (req, res) => {
+router.delete('/deleteProduct/:id',adminAuthentication, async (req, res) => {
     try {
         const product = await Product.findByIdAndDelete(req.params.id);
 
