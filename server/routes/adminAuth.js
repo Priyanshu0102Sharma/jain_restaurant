@@ -3,6 +3,7 @@ const router = express.Router();
 const Admin = require('../database/models/adminModal');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const adminAuthentication = require('../middlewares/adminAuthentication');
 
 const JWT_SECRET_ADMIN = process.env.JWT_ADMIN_SECRET;
 
@@ -35,7 +36,7 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.post('/addAdmin', async (req, res) => {   //middleware
+router.post('/addAdmin', adminAuthentication, async (req, res) => {   //middleware
     try{
         const {name, email, password} = req.body;
 
