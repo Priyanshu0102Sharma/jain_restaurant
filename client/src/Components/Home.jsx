@@ -1,14 +1,18 @@
 import React from 'react'
 import About from './About'
 import Items from './Items'
-import Footer from './Footer'
+import CarouselProg from './Carousel'
+import Info from './Info'
+import Response from './Response'
 
 const Home = () => {
   return (
     <div>
+        <CarouselProg />
         <About />
+        <Info />
         <Items />
-        <Footer />
+        <Response />
     </div>
   )
 }

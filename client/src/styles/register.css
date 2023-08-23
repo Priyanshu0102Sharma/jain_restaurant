@@ -1,0 +1,13 @@
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .register-form {
+    border: 3px solid rgb(7, 0, 0);
+    padding: 30px;
+    /* background-color: bisque; */
+  }
+  
