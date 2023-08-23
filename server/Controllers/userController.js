@@ -14,7 +14,7 @@ const registerController = async(req, res) =>{
         req.body.password = hashedPassword;
         const newUser = new userModel(req.body);
         await newUser.save();
-        res.send(201).send({message:'Register Succesfull', success:true})
+        res.status(201).json(newUser)
     }
     catch(err){
         console.log(err);

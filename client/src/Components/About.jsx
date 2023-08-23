@@ -8,7 +8,7 @@ const About = () => {
       </div>
       <div className='about flex flex-col space-y-4 w-1/2 items-center smm:w-full'>
         <div className='about-heading text-center text-6xl font-semibold mb-4 text-orange-500 mdm:text-lg'>ABOUT US</div>
-        <div className='about-shop smm:text-sm'><span className='font-semibold text-yellow-600'>Welcome</span> to Jain Jalebi iconic Gurgaon eatery established in <span className='text-yellow-600'>1970</span>. Savor the taste of tradition with our authentic <span className='font-semibold text-yellow-600'>Jalebi, Samosa, Bedmi Poori and Kachodi</span>. For over 50 years, we've delighted in sharing these cherished flavors with our patrons. There are <span className='text-xl text-orange-800 smm:text-lg'><b>Two Outlets</b></span> of this restaurant in Gurgaon, Haryana. Join us on this flavorful journey.</div>
+        <div className='about-shop smm:text-sm'><span className='font-semibold text-yellow-600'>Welcome</span> to Jain Jalebi iconic Gurgaon eatery established in <span className='text-yellow-600'>1970</span>. Savor the taste of tradition with our authentic <span className='font-semibold text-yellow-600'>Jalebi, Samosa, Bedmi Poori and Kachodi</span>. For over 50 years, we've delighted in sharing these cherished flavors with our patrons. There are two outlets of this restaurant in Gurgaon, Haryana. Join us on this flavorful journey.</div>
         <div className='founder italic text-yellow-500 smm:text-sm'>
           <div className='name font-semibold text-xl mdm:text-sm'>Kishan Chand Jain</div>
           <span className='founder-name text-gray-400 mdm:text-sm'>Founder</span>
