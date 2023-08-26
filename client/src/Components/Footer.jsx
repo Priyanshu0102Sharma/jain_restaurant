@@ -1,0 +1,59 @@
+import React from 'react';
+import logo from '../Jain Jalebi Logo.png';
+import { TiLocation } from 'react-icons/ti';
+import { BsTelephoneFill } from 'react-icons/bs';
+
+const Footer = () => {
+    return (
+        <>
+            <div className='footer flex p-2 smm:flex-wrap'>
+                <div className='footer-timings w-1/3 smm:w-full flex flex-col justify-center items-center space-y-4'>
+                    <div className='image h-12 smm:h-8'>
+                        <img src={logo} className='w-40 h-10 rounded-md' />
+                    </div>
+                    <div className='times flex space-x-4 h-[20vh] smm:h-20'>
+                        <ul className='weeks font-semibold space-y-2'>
+                            <li>Weekdays :</li>
+                            <li>Weekends :</li>
+                        </ul>
+                        <ul className='timing space-y-2'>
+                            <li>07:00 A.M. - 07:00 P.M.</li>
+                            <li>07:00 A.M. - 08:00 P.M.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='contacts w-1/3 smm:w-full flex flex-col items-center space-y-4 mb-4'>
+                    <h2 className='uppercase text-xl font-bold text-center h-12 smm:h-8'>Contacts</h2>
+                    <div className='flex flex-col h-[20vh] smm:h-32 smm:text-sm space-y-2'>
+                        <div className='location flex space-x-2 items-center'>
+                            <TiLocation />
+                            <h4>Jain Jalebi Near Head Post Office, Sadar Bazar, Gurugram, Haryana 122001</h4>
+
+                        </div>
+                        <div className='location flex space-x-2 items-center'>
+                            <TiLocation />
+                            <h4>Jain Jalebi Near Marumal School, Sadar Bazar, Roshan Pura, Gurugram, Haryana 122001</h4>
+
+                        </div>
+                        <div className='contact-number flex items-center space-x-2'>
+                            <BsTelephoneFill />
+                            <h4>+91-9818788585, +91-9873361488</h4>
+                        </div>
+                    </div>
+                </div>
+                <div className='help-section w-1/3 smm:w-full flex flex-col justify-center space-y-4 smm:text-sm'>
+                    <h2 className='uppercase text-xl font-bold text-center h-12 smm:h-8'>Help</h2>
+                    <ul className='flex flex-col items-center h-[20vh] smm:h-20 cursor-pointer space-y-2'>
+                        <li>FAQ</li>
+                        <li>My Profile</li>
+                    </ul>
+                </div>
+            </div>
+            <div className='copyrights bg-orange-500 flex justify-center items-center h-14 mt-2'>
+                <h5 className='font-semiold text-white smm:text-sm'>&copy; 2032 All Rights Reserved By JAIN JALEBI</h5>
+            </div>
+        </>
+    )
+}
+
+export default Footer
