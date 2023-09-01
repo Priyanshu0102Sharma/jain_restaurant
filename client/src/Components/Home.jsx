@@ -4,6 +4,7 @@ import Items from './Items'
 import CarouselProg from './Carousel'
 import Info from './Info'
 import Response from './Response'
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Info />
         <Items />
         <Response />
+        <Footer />
     </div>
   )
 }
